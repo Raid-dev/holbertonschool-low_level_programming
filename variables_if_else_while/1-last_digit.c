@@ -18,13 +18,13 @@ int main(void)
 
 	unsigned int last_digit = n % 10;
 
-	printf("Last digit of %i is %u last_digit", n, last_digit);
+	printf("Last digit of %i is %i last_digit", n, (n % 10));
 
-	if (last_digit > 5)
+	if ((n % 10) > 5)
 	{
 		puts(" and is greater than 5");
 	}
-	else if (last_digit == 0)
+	else if ((n%10) == 0)
 	{
 		puts(" and is 0");
 	}
