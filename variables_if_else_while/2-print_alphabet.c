@@ -13,7 +13,7 @@ int main(void)
 
 	while (i < strlen("abcdefghijklmnopqrstuvwxyz"))
 	{
-		putc("abcdefghijklmnopqrstuvwxyz"[i]);
+		putchar("abcdefghijklmnopqrstuvwxyz"[i]);
 
 		i++;
 	}
