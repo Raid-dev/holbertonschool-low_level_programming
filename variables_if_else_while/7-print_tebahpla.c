@@ -17,7 +17,7 @@ int main(void)
 		putchar(alphabet[i]);
 	}
 
-	printf('\n');
+	putchar('\n');
 
 	return (0);
 }
