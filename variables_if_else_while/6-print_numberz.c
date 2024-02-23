@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 
 /**
  * main - Entry point
@@ -13,7 +12,7 @@ int main(void)
 
 	while (i < 10)
 	{
-		write(1, &i, 1);
+		putchar(i);
 
 		i++;
 	}
