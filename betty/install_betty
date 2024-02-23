@@ -1,0 +1,26 @@
+#!/bin/bash
+git clone https://github.com/hs-hq/Betty
+cd /Betty/
+sudo ./install.sh
+echo -e "#!/bin/bash\n
+# Simply a wrapper script to keep you from having to use betty-style\n
+# and betty-doc separately on every item.\n
+# Originally by Tim Britton (@wintermanc3r), multiargument added by\n
+# Larry Madeo (@hillmonkey)\n
+
+BIN_PATH=\"/usr/local/bin\"\n
+BETTY_STYLE=\"betty-style\"\n
+BETTY_DOC=\"betty-doc\"\n
+
+if [ \"$#\" = \"0\" ]; then\n
+    echo \"No arguments passed.\"\n
+    exit 1\n
+fi\n
+
+for argument in \"$@\" ; do\n
+    echo -e \"\n========== $argument ==========\"\n
+    ${BIN_PATH}/${BETTY_STYLE} \"$argument\"\n
+    ${BIN_PATH}/${BETTY_DOC} \"$argument\"\n
+done\n" > /Betty/betty
+chmod a+x /Betty/betty
+sudo mv /Betty/betty /bin/
