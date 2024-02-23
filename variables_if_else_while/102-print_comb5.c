@@ -18,16 +18,24 @@ int main(void)
 			if (i < 10)
 			{
 				putchar(0);
+				putchar(i + '0');
 			}
-			putchar(i + '0');
+			else
+			{
+				putchar(i);
+			}
 
 			putchar(' ');
 
 			if (j < 10)
 			{
 				putchar(0);
+				putchar(j + '0');
 			}
-			putchar(j + '0');
+			else
+			{
+				putchar(j);
+			}
 				
 			if (i == 98 && j == 99)
 			{
