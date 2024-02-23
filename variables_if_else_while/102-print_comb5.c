@@ -11,6 +11,7 @@ int main(void)
 	int i;
 	int j;
 	int k;
+	int z;
 
 	for (i = 0; i < 10; i++)
 	{
