@@ -13,30 +13,32 @@ int main(void)
 	int k;
 	int z;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 99; i++)
 	{
-		for (j = 0; j < 9; j++)
-		{
-			for (k = i; k < 10; k++)
+		for (j = 0; j < 100; j++)
+		{	
+			if (i < 10)
 			{
-				for (z = j; z < 10; z++)
-				{
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(z + '0');
+				putchar(0);
+			}
+			putchar(i + '0');
+
+			putchar(' ');
+
+			if (j < 10)
+			{
+				putchar(0);
+			}
+			putchar(j + '0');
 				
-					if (i == 9 && j == 8 && k == 9 && z == 9)
-					{
-						putchar('\n');
-					}
-					else
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+			if (i == 98 && j == 99)
+			{
+				putchar('\n');
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
