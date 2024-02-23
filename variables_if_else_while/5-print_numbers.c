@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	int i = 0;
+	unsigned int i = 0;
 
 	while (i < 10)
 	{
-		printf("%i, i");
+		printf("%i", i);
 
 		i++;
 	}
