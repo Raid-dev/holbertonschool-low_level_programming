@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int i = 0;
+	long unsigned int i = 0;
 
 	while (i < strlen("abcdefghijklmnopqrstuvwxyz"))
 	{
