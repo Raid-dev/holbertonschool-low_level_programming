@@ -17,7 +17,7 @@ int main(void)
 
 	while (i < 10)
 	{
-		putchar(' ')
+		putchar(' ');
 		putchar(i);
 		
 		i++;
