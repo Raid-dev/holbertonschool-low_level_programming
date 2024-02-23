@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 /**
  * main - Entry point
@@ -13,7 +12,7 @@ int main(void)
 
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 
-	while (i < strlen(alphabet))
+	while (i < 26)
 	{
 		if (alphabet[i] != 'q' && alphabet[i] != 'e')
 		{
