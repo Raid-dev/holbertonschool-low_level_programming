@@ -18,15 +18,15 @@ int main(void)
 
 	if (n > 0)
 	{
-		return(n + " is positive");
+		puts("n is positive");
 	}
 	else if (n < 0)
 	{
-		return(n + " is negative");
+		puts("n is negative");
 	}
 	else
 	{
-		return(n + " is zero");
+		puts("n is zero");
 	}
 
 	return (0);
