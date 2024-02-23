@@ -12,17 +12,10 @@ int main(void)
 
 	while (i < 10)
 	{
-		if (i == 9)
-		{
-			putchar(i + '0');
-		}
-		else
-		{
-			putchar(i + '0');
-			putchar(',');
-			putchar(' ');
-		}
-		
+		putchar(i + '0');
+		putchar(',');
+		putchar(' ');
+
 		i++;
 	}
 
