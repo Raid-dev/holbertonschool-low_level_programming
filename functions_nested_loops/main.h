@@ -6,6 +6,10 @@
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
+ *
+ * print_alphabet - prints the alphabet to stdout
  */
 
 int _putchar(char c);
+
+void print_alphabet(void);
