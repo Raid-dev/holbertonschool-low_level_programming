@@ -8,9 +8,9 @@
 
 int main(void)
 {
- 	int i = 1;
-	int j = 2;
-	int temp;
+ 	long long int i = 1;
+	long long int j = 2;
+	long long int temp;
 	
 	int k = 0;
 
