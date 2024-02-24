@@ -1,5 +1,4 @@
-#include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * sum_multiples - Prints sum of multiples
@@ -8,7 +7,7 @@
  * Return: Sum
  */
 
-int sum_multiples(void)
+int main(void)
 {
 	int i = 1;
 	int sum = 0;
