@@ -17,7 +17,7 @@ int main(void)
 	printf("%ld, ", i);
         printf("%ld, ", j);
 
-	while (k < 50)
+	while (k < 48)
 	{
 		temp = i + j;
 
