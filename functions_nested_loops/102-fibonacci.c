@@ -14,8 +14,8 @@ int main(void)
 	
 	int k = 0;
 
-	printf("%d, ", i);
-        printf("%d, ", j);
+	printf("%ld, ", i);
+        printf("%ld, ", j);
 
 	while (k < 50)
 	{
