@@ -17,7 +17,7 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-void print_string(char str, int length)
+void print_string(char str[], int length)
 {
 	int i;
 
