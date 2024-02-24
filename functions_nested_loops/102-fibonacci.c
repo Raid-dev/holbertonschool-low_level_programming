@@ -16,12 +16,12 @@ int main(void)
 
 	while (k < 50)
 	{
-		putc(i);
-		putc(j);
+		printf("%d", i);
+		printf("%d", j);
 
 		temp = i + j;
 
-		putc(temp);
+		printf("%d", temp);
 
 		i = j;
 
