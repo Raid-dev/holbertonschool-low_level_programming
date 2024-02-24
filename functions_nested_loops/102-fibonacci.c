@@ -14,16 +14,19 @@ int main(void)
 	
 	int k = 0;
 
+	printf("%d, ", i);
+        printf("%d, ", j);
+
 	while (k < 50)
 	{
-		printf("%d", i);
-		printf("%d", j);
-
 		temp = i + j;
 
 		printf("%d", temp);
 
 		i = j;
+
+		if (k != 49)
+			printf(", ");
 
 		j = temp;
 
