@@ -31,4 +31,6 @@ int sum_multiples(void)
 	_putchar(sum % 10 + '0');
 
 	_putchar('\n');
+
+	return (0);
 }
