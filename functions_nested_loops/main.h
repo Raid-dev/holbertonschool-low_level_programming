@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <string.h>
 
 /**
  * _putchar - writes the character c to stdout
@@ -18,11 +17,9 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 
-void print_string(char str)
+void print_string(char str, int length)
 {
 	int i;
-	
-	int length = strlen(str);
 
 	for (i = 0; i < length; i++)
 	{
