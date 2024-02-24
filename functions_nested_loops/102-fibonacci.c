@@ -25,7 +25,7 @@ int main(void)
 
 		i = j;
 
-		if (k != 49)
+		if (k != 47)
 			printf(", ");
 
 		j = temp;
