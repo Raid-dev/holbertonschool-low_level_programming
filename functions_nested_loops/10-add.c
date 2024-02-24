@@ -5,7 +5,7 @@
  * @a: First integer
  * @b: Second integer
  *
- * Result: Always int (Success)
+ * Result: result of addition
  */
 
 int add(int a, int b)
