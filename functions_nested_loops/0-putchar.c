@@ -1,6 +1,6 @@
 #include "main.h"
 
-extern _putchar(char c);
+extern int _putchar(char c);
 
 /**
  * main - Entry point
