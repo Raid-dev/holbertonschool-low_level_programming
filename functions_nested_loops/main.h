@@ -2,14 +2,14 @@
 
 /**
  * _putchar - writes the character c to stdout
- * @c: The character to print
  *
- * print_alphabet - prints the alphabet in lower case to stdout
+ * print_alphabet - prints the alphabet in lowercase to stdout
  *
- * print_alphabet_x10 - prints 10 times the alphabet in lower case to stdout
+ * print_alphabet_x10 - prints 10 times the alphabet in lowercase to stdout
  *
- * _islower - checks if c is lowercase or not
- * @c: The character to check
+ * _islower - checks if the character c is lowercase or not
+ *
+ * _isalpha - checks if the character c is a letter
  */
 
 int _putchar(char c);
@@ -19,3 +19,5 @@ void print_alphabet(void);
 void print_alphabet_x10(void);
 
 int _islower(int c);
+
+int _isalpha(int c);
