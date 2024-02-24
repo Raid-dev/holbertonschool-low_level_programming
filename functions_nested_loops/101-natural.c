@@ -22,14 +22,7 @@ int main(void)
 		i++;
 	}
 
-	_putchar(sum / 100000);
-	_putchar(sum / 10000);
-	_putchar(sum / 1000);
-	_putchar(sum / 100);
-	_putchar(sum / 10);
-	_putchar(sum % 10 + '0');
-
-	_putchar('\n');
+	printf("%d\n", sum);
 
 	return (0);
 }
