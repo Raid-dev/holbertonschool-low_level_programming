@@ -1,7 +1,5 @@
 #include "main.h"
 
-extern int _putchar(char c);
-
 /**
  * main - Entry point
  *
@@ -10,14 +8,7 @@ extern int _putchar(char c);
 
 int main(void)
 {
-	int i;
-	
-	char str[] = "_putchar";
-
-	for (i = 0; i < 8; i++)
-	{
-		_putchar(str[i]);
-	}
+	print_string("_putchar");
 
 	return (0);
 }
