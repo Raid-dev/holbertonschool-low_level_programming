@@ -26,6 +26,8 @@
  * print_to_98 - Prints all natural numbers from n to 98
  *
  * print_times_table - Prints the n times table, starting with 0
+ *
+ * sum_multiples - Prints sum of natural numbers which have multiples 3 or 5, below 1024 (including)
  */
 
 int _putchar(char c);
@@ -53,3 +55,5 @@ int add(int a, int b);
 void print_to_98(int n);
 
 void print_times_table(int n);
+
+int sum_multiples(void);
