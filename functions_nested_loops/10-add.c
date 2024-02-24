@@ -2,8 +2,8 @@
 
 /**
  * add - Adds two integers a and b
- * @a - First integer
- * @b - Second integer
+ * @a: First integer
+ * @b: Second integer
  *
  * Result: Always int (Success)
  */
