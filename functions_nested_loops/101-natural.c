@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 /**
- * sum_multiples - Prints sum of multiples
+ * main - Entry point
  *
- *
- * Return: Sum
+ * Return: Always 0 (Success)
  */
 
 int main(void)
