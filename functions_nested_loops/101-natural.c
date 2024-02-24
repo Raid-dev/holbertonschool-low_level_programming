@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
+ * sum_multiples - Prints sum of multiples
  *
  *
- *
- * ?
+ * Return: Sum
  */
 
-void sum_multiples(void)
+int sum_multiples(void)
 {
 	int i = 1;
 	int sum = 0;
@@ -21,4 +21,6 @@ void sum_multiples(void)
 
 		i++;
 	}
+
+	return (sum);
 }
