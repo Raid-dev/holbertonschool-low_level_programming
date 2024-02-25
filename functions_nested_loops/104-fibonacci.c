@@ -17,7 +17,7 @@ int main(void)
 	printf("%ld, ", i);
 	printf("%ld, ", j);
 
-	while (k < 96)
+	while (k < 97)
 	{
 		temp = i + j;
 
@@ -25,7 +25,7 @@ int main(void)
 
 		i = j;
 
-		if (k != 95)
+		if (k != 96)
 			printf(", ");
 
 		j = temp;
