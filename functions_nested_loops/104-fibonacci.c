@@ -1,88 +1,40 @@
 #include <stdio.h>
-#include <string.h>
+#define LARGEST 10000000000
 
 /**
- * addLargeNumbers - Adds large numbers
- * @num1: The input number
- * @num2: The input number
- * @result: The desired result
- *
- * Return: Sum
- */
-
-char *addLargeNumbers(char num1[], char num2[], char result[])
-{
-	int len1 = strlen(num1), len2 = strlen(num2), sum, i;
-
-	int maxLength = len2, resultArr[1000] = {0}, carry = 0, digit1, digit2;
-
-	int resultLength;
-
-	for (i = 0; i < maxLength; i++)
-	{
-		if (i < len1)
-		{
-			digit1 = num1[len1 - 1 - i] - '0';
-		}
-		else
-		{
-			digit1 = 0;
-		}
-		if (i < len2)
-		{
-			digit2 = num2[len2 - 1 - i] - '0';
-		}
-		else
-		{
-			digit2 = 0;
-		}
-	sum = digit1 + digit2 + carry;
-	resultArr[i] = sum % 10;
-	carry = sum / 10;
-	}
-	if (carry > 0)
-	{
-		resultArr[maxLength] = carry;
-		maxLength++;
-	}
-	resultLength = maxLength;
-
-	for (i = 0; i < maxLength; i++)
-		result[i] = resultArr[maxLength - 1 - i] + '0';
-	result[resultLength] = '\0';
-	return (result);
-}
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - main block
+ * Description: Find and print the first 98 fib numbers starting with 1 and 2.
+ * Numbers should be coma and space separated.
+ * Return: 0
  */
 
 int main(void)
 {
-	char num1[100] = "1";
-	char num2[100] = "2";
-	char result[1001];
-	char *temp;
-	int c = 0;
+	unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
+	unsigned long int hold1, hold2, hold3;
+	int count;
 
-	while (c < 98)
+	printf("%lu, %lu, ", bk1, bk2);
+	for (count = 2; count < 98; count++)
 	{
-		printf("%s", num1);
-		if (c < 97)
+		if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
 		{
-			printf(", ");
+			hold1 = (bk1 + bk2) / LARGEST;
+			hold2 = (bk1 + bk2) % LARGEST;
+			hold3 = fr1 + fr2 + hold1;
+			fr1 = fr2, fr2 = hold3;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu%010lu", fr2, bk2);
 		}
 		else
 		{
-			printf("\n");
+			hold2 = bk1 + bk2;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu", bk2);
 		}
-		temp = addLargeNumbers(num1, num2, result);
-
-		strcpy(num1, num2);
-		strcpy(num2, temp);
-		c++;
+		if (count != 97)
+			printf(", ");
 	}
+	printf("\n");
 	return (0);
 }
