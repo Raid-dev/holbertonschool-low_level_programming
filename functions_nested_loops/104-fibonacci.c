@@ -32,8 +32,10 @@ int main(void)
 		k++;
 	}
 	printf("1");
+	putchar(1 + 2);
+	putchar(1 + 2 + 2);
 
-	temp = 35301852344706746049;
+	temp = 301852344706746049;
 
 	printf("%ld", temp);
 
