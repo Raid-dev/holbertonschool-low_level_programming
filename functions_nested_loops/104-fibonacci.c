@@ -32,8 +32,6 @@ int main(void)
 		f2 = temp;
 
 		carry = 0;
-		
-		j;
 
 		for (j = 0; j < MAX_DIGITS; j++)
 		{
