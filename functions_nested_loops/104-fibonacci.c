@@ -13,7 +13,8 @@ int main(void)
 		digits[i] = 0;
 	}
 
-	int f1 = 0, f2 = 1;
+	int f1 = 0;
+	int f2 = 1;
 
 	for (i = 3; i <= 98; i++)
 	{
@@ -37,7 +38,9 @@ int main(void)
 		}
 	}
 
-	int start = MAX_DIGITS - 1;
+	int start;
+	
+	start = MAX_DIGITS - 1;
 
 	while (digits[start] == 0)
 	{
