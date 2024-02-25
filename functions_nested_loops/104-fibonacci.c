@@ -34,8 +34,8 @@ int main(void)
 
 	temp = i + j;
 
-	putchar(temp / 100000000000000000000 + '0');
-	printf("%ld", temp % 100000000000000000000);
+	putchar(temp / 10000000000000000000 + '0');
+	printf("%ld", temp % 10000000000000000000);
 
 	printf("\n");
 
