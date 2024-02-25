@@ -1,61 +1,88 @@
 #include <stdio.h>
+#include <string.h>
 
-#define MAX_DIGITS 100
+/**
+ * addLargeNumbers - Adds large numbers
+ * @num1: The input number
+ * @num2: The input number
+ * @result: The desired result
+ *
+ * Return: Sum
+ */
+
+char *addLargeNumbers(char num1[], char num2[], char result[])
+{
+	int len1 = strlen(num1), len2 = strlen(num2), sum, i;
+
+	int maxLength = len2, resultArr[1000] = {0}, carry = 0, digit1, digit2;
+
+	int resultLength;
+
+	for (i = 0; i < maxLength; i++)
+	{
+		if (i < len1)
+		{
+			digit1 = num1[len1 - 1 - i] - '0';
+		}
+		else
+		{
+			digit1 = 0;
+		}
+		if (i < len2)
+		{
+			digit2 = num2[len2 - 1 - i] - '0';
+		}
+		else
+		{
+			digit2 = 0;
+		}
+	sum = digit1 + digit2 + carry;
+	resultArr[i] = sum % 10;
+	carry = sum / 10;
+	}
+	if (carry > 0)
+	{
+		resultArr[maxLength] = carry;
+		maxLength++;
+	}
+	resultLength = maxLength;
+
+	for (i = 0; i < maxLength; i++)
+		result[i] = resultArr[maxLength - 1 - i] + '0';
+	result[resultLength] = '\0';
+	return (result);
+}
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
-	int digits[MAX_DIGITS];
-	int f1;
-	int f2;
-	int temp;
-	int i;
-	int j;
-	int k;
-	int carry;
-	int sum;
-	int start;
+	char num1[100] = "1";
+	char num2[100] = "2";
+	char result[1001];
+	char *temp;
+	int c = 0;
 
-	for (i = 0; i < MAX_DIGITS; i++)
+	while (c < 98)
 	{
-		digits[i] = 0;
-	}
-
-	f1 = 0;
-	f2 = 1;
-
-	for (i = 3; i <= 98; i++)
-	{
-		temp = f1;
-
-		f1 = f2;
-
-		f2 = temp;
-
-		carry = 0;
-
-		for (j = 0; j < MAX_DIGITS; j++)
+		printf("%s", num1);
+		if (c < 97)
 		{
-			sum = digits[j] + f1 + carry;
-
-  			digits[j] = sum % 10;
-
-			carry = sum / 10;
+			printf(", ");
 		}
+		else
+		{
+			printf("\n");
+		}
+		temp = addLargeNumbers(num1, num2, result);
+
+		strcpy(num1, num2);
+		strcpy(num2, temp);
+		c++;
 	}
-
-	start = MAX_DIGITS - 1;
-
-	while (digits[start] == 0)
-	{
-		start--;
-	}
-
-	for (k = start; k >= 0; k--)
-	{
-		printf("%d", digits[k]);
-	}
-
-	printf("\n");
-
-	return 0;
+	return (0);
 }
