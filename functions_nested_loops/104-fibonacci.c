@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-// Define the maximum number of digits
 #define MAX_DIGITS 100
 
 int main(void)
 {
 	int digits[MAX_DIGITS];
 
-	for (int i = 0; i < MAX_DIGITS; i++)
+	int i;
+
+	for (i = 0; i < MAX_DIGITS; i++)
 	{
 		digits[i] = 0;
 	}
 
 	int f1 = 0, f2 = 1;
-
-	int i;
 
 	for (i = 3; i <= 98; i++)
 	{
@@ -25,11 +24,15 @@ int main(void)
 		f2 = temp;
 
 		int carry = 0;
+		
+		int j;
 
-		for (int j = 0; j < MAX_DIGITS; j++)
+		for (j = 0; j < MAX_DIGITS; j++)
 		{
 			int sum = digits[j] + f1 + carry;
+
   			digits[j] = sum % 10;
+
 			carry = sum / 10;
 		}
 	}
@@ -41,7 +44,9 @@ int main(void)
 		start--;
 	}
 
-	for (int k = start; k >= 0; k--)
+	int k;
+
+	for (k = start; k >= 0; k--)
 	{
 		printf("%d", digits[k]);
 	}
