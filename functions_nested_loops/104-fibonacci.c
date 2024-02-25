@@ -32,16 +32,12 @@ int main(void)
 		k++;
 	}
 	printf("1");
-	putchar(1 + 2);
-	putchar(1 + 2 + 2);
+	putchar((1 + 2) + '0');
+	putchar((1 + 2 + 2) + '0');
 
 	temp = 301852344706746049;
 
 	printf("%ld", temp);
-
-	putchar(1 - 1);
-	putchar(2 + 2);
-	putchar(1 + 2 + 2 + 2 + 2);
 
 	printf("\n");
 
