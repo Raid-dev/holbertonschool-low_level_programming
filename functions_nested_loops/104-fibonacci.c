@@ -5,32 +5,39 @@
 int main(void)
 {
 	int digits[MAX_DIGITS];
-
+	int f1;
+	int f2;
+	int temp;
 	int i;
+	int j;
+	int k;
+	int carry;
+	int sum;
+	int start;
 
 	for (i = 0; i < MAX_DIGITS; i++)
 	{
 		digits[i] = 0;
 	}
 
-	int f1 = 0;
-	int f2 = 1;
+	f1 = 0;
+	f2 = 1;
 
 	for (i = 3; i <= 98; i++)
 	{
-		int temp = f1;
+		temp = f1;
 
 		f1 = f2;
 
 		f2 = temp;
 
-		int carry = 0;
+		carry = 0;
 		
-		int j;
+		j;
 
 		for (j = 0; j < MAX_DIGITS; j++)
 		{
-			int sum = digits[j] + f1 + carry;
+			sum = digits[j] + f1 + carry;
 
   			digits[j] = sum % 10;
 
@@ -38,16 +45,12 @@ int main(void)
 		}
 	}
 
-	int start;
-	
 	start = MAX_DIGITS - 1;
 
 	while (digits[start] == 0)
 	{
 		start--;
 	}
-
-	int k;
 
 	for (k = start; k >= 0; k--)
 	{
