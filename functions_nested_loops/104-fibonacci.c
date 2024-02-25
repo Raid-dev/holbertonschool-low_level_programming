@@ -17,7 +17,7 @@ int main(void)
 	printf("%ld, ", i);
 	printf("%ld, ", j);
 
-	while (k < 97)
+	while (k < 95)
 	{
 		temp = i + j;
 
@@ -25,13 +25,17 @@ int main(void)
 
 		i = j;
 
-		if (k != 96)
-			printf(", ");
+		printf(", ");
 
 		j = temp;
 
 		k++;
 	}
+
+	temp = i + j;
+
+	putchar(temp / 10000000000 + '0');
+	printf("%ld", temp % 10000000000);
 
 	printf("\n");
 
