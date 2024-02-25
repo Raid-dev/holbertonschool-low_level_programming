@@ -39,6 +39,10 @@ int main(void)
 
 	printf("%ld", temp);
 
+	putchar(1 - 1);
+	putchar(2 + 2);
+	putchar(1 + 2 + 2 + 2 + 2);
+
 	printf("\n");
 
 	return (0);
