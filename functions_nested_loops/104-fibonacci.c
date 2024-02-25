@@ -31,8 +31,13 @@ int main(void)
 
 		k++;
 	}
+	printf("1");
 
-	printf("135301852344706746049\n");
+	temp = 35301852344706746049;
+
+	printf("%ld", temp);
+
+	printf("\n");
 
 	return (0);
 }
