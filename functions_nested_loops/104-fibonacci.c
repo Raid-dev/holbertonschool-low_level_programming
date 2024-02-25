@@ -1,45 +1,52 @@
 #include <stdio.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+// Define the maximum number of digits
+#define MAX_DIGITS 100
 
 int main(void)
 {
-	long int i = 1;
-	long int j = 2;
-	long int temp;
+	int digits[MAX_DIGITS];
 
-	int k = 0;
-
-	printf("%ld, ", i);
-	printf("%ld, ", j);
-
-	while (k < 95)
+	for (int i = 0; i < MAX_DIGITS; i++)
 	{
-		temp = i + j;
-
-		printf("%ld", temp);
-
-		i = j;
-
-		printf(", ");
-
-		j = temp;
-
-		k++;
+		digits[i] = 0;
 	}
-	printf("1");
-	putchar((1 + 2) + '0');
-	putchar((1 + 2 + 2) + '0');
 
-	temp = 301852344706746049;
+	int f1 = 0, f2 = 1;
 
-	printf("%ld", temp);
+	int i;
+
+	for (i = 3; i <= 98; i++)
+	{
+		int temp = f1;
+
+		f1 = f2;
+
+		f2 = temp;
+
+		int carry = 0;
+
+		for (int j = 0; j < MAX_DIGITS; j++)
+		{
+			int sum = digits[j] + f1 + carry;
+  			digits[j] = sum % 10;
+			carry = sum / 10;
+		}
+	}
+
+	int start = MAX_DIGITS - 1;
+
+	while (digits[start] == 0)
+	{
+		start--;
+	}
+
+	for (int k = start; k >= 0; k--)
+	{
+		printf("%d", digits[k]);
+	}
 
 	printf("\n");
 
-	return (0);
+	return 0;
 }
