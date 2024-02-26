@@ -24,7 +24,10 @@ int main(void)
 
 		if (i != 100)
 			putchar(' ');
+		else
+			putchar('\n');
 	}
+
 
 	return (0);
 }
