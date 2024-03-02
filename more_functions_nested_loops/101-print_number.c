@@ -7,6 +7,16 @@
  * @n: The input integer
  */
 
+void print_digits(int n)
+{
+	if (n / 10 != 0)
+	{
+		print_digits(n / 10);
+	}
+
+	_putchar(n % 10 + '0');
+}
+
 void print_number(int n)
 {
 	if (n < 0)
@@ -15,10 +25,5 @@ void print_number(int n)
 		n = -n;
 	}
 
-	if (n / 10 != 0)
-	{
-		print_number(n / 10);
-	}
-
-	_putchar(n % 10 + '0');
+	print_digits(n);
 }
