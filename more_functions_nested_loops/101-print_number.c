@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_number - Entry point
@@ -9,25 +11,12 @@
 
 void print_number(int n)
 {
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
+	char buffer[20];
 
-	int divisor = 1;
-	int temp = n;
+	int length = sprintf(buffer, "%d", n);
 
-	while (temp / 10 != 0)
+	for (int i = 0; i < length; i++)
 	{
-		divisor *= 10;
-		temp /= 10;
-	}
-
-	while (divisor != 0)
-	{
-		_putchar((n / divisor) + '0');
-		n %= divisor;
-		divisor /= 10;
+		_putchar(buffer[i]);
 	}
 }
