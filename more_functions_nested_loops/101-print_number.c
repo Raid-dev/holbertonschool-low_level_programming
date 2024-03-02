@@ -13,9 +13,11 @@ void print_number(int n)
 {
 	char buffer[20];
 
+	int i;
+
 	int length = sprintf(buffer, "%d", n);
 
-	for (int i = 0; i < length; i++)
+	for (i = 0; i < length; i++)
 	{
 		_putchar(buffer[i]);
 	}
