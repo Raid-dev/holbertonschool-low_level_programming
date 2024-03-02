@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 
 /**
  * print_number - Entry point
@@ -8,52 +7,34 @@
  * @n: The input integer
  */
 
-int power(int base, int exp)
-{
-	int result = 1;
-
-	int i;
-
-	for (i = 0; i < exp; i++)
-		result *= base;
-
-	return result;
-}
-
 void print_number(int n)
 {
-    if (n == 0) {
-        _putchar('0');
-        return;
-    }
+	int temp = 1;
 
-    if (n < 0) {
-        _putchar('-');
+	if (n < 0)
+	{
+		n = n * (-1);
+		_putchar('-');
+	}
 
-        n = -n;
-    }
+	do {
+		if (n < 10)
+		{
+			_putchar(n + '0');
+			break;
+		}
 
-    int numDigits;
+		temp = temp * 10 + n % 10;
 
-    int temp;
-    
-    temp = n;
-    
-    numDigits = 0;
+		n /= 10;
+	} while (n != 0);
 
-    while (temp > 0)
-    {
-        temp /= 10;
+	do {
+		if (temp < 10)
+			break;
 
-        numDigits++;
-    }
+		_putchar(temp % 10 + '0');
 
-    int digit;
-
-    for (i = numDigits - 1; i >= 0; i--)
-    {
-        digit = (n / power(10, i)) % 10;
-
-        _putchar(digit + '0');
-    }
+		temp /= 10;
+	} while (temp != 0);
 }
