@@ -8,7 +8,18 @@
  * @n: The input integer
  */
 
-void print_number(int n) {
+int power(int base, int exp)
+{
+    int result = 1;
+
+    for (int i = 0; i < exp; i++)
+	result *= base;
+
+    return result;
+}
+
+void print_number(int n)
+{
     if (n == 0) {
         _putchar('0');
         return;
@@ -32,7 +43,7 @@ void print_number(int n) {
 
     for (int i = numDigits - 1; i >= 0; i--)
     {
-        int digit = (n / pow(10, i)) % 10;
+        int digit = (n / power(10, i)) % 10;
 
         _putchar(digit + '0');
     }
