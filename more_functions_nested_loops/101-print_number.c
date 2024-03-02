@@ -1,8 +1,4 @@
-#include <stdio.h>
-
-void _putchar(char c) {
-    putchar(c);
-}
+#include "main.h"
 
 void print_number(int n) {
     if (n < 0) {
