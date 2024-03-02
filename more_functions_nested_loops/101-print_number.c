@@ -9,7 +9,7 @@
 
 void print_number(int n)
 {
-	int temp = 1;
+	unsigned int temp = 1;
 
 	if (n < 0)
 	{
