@@ -31,7 +31,7 @@ void print_number(int n)
 
 	while (n > 0)
 	{
-		buffer[index++] = '0' + (n % 10);
+		buffer[index++] = '0' + (int)(n % 10);
 		n /= 10;
 	}
 
