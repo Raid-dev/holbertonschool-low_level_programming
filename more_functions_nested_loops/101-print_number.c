@@ -11,32 +11,21 @@
 
 void print_number(int n)
 {
-	char buffer[20];
-	int index;
-	int i;
-
-	if (n == 0)
-	{
-		_putchar('0');
-		return;
-	}
+	unsigned int k = n;
 
 	if (n < 0)
 	{
+		n *= -1;
+
+		k = n;
+
 		_putchar('-');
-		n = -n;
 	}
 
-	index = 0;
+	k /= 10;
 
-	while (n > 0)
-	{
-		buffer[index++] = '0' + (n % 10);
-		n /= 10;
-	}
+	if (k != 0)
+		print_number(k);
 
-	for (i = index - 1; i >= 0; i--)
-	{
-		_putchar(buffer[i]);
-	}
+	_putchar((unsigned int) n % 10 + '0');
 }
