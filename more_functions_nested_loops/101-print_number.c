@@ -33,9 +33,13 @@ void print_number(int n)
         n = -n;
     }
 
-    int numDigits = 0;
+    int numDigits;
 
-    int temp = n;
+    int temp;
+    
+    temp = n;
+    
+    numDigits = 0;
 
     while (temp > 0)
     {
@@ -44,7 +48,6 @@ void print_number(int n)
         numDigits++;
     }
 
-    int i;
     int digit;
 
     for (i = numDigits - 1; i >= 0; i--)
