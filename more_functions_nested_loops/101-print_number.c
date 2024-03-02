@@ -10,12 +10,14 @@
 
 int power(int base, int exp)
 {
-    int result = 1;
+	int result = 1;
 
-    for (int i = 0; i < exp; i++)
-	result *= base;
+	int i;
 
-    return result;
+	for (i = 0; i < exp; i++)
+		result *= base;
+
+	return result;
 }
 
 void print_number(int n)
@@ -32,6 +34,7 @@ void print_number(int n)
     }
 
     int numDigits = 0;
+
     int temp = n;
 
     while (temp > 0)
@@ -41,9 +44,12 @@ void print_number(int n)
         numDigits++;
     }
 
-    for (int i = numDigits - 1; i >= 0; i--)
+    int i;
+    int digit;
+
+    for (i = numDigits - 1; i >= 0; i--)
     {
-        int digit = (n / power(10, i)) % 10;
+        digit = (n / power(10, i)) % 10;
 
         _putchar(digit + '0');
     }
