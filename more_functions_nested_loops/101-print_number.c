@@ -11,6 +11,10 @@
 
 void print_number(int n)
 {
+	char buffer[20];
+	int index;
+	int i;
+
 	if (n == 0)
 	{
 		_putchar('0');
@@ -23,16 +27,13 @@ void print_number(int n)
 		n = -n;
 	}
 
-	char buffer[20];
-	int index = 0;
+	index = 0;
 
 	while (n > 0)
 	{
 		buffer[index++] = '0' + (n % 10);
 		n /= 10;
 	}
-
-	int i;
 
 	for (i = index - 1; i >= 0; i--)
 	{
