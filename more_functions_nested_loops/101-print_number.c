@@ -9,18 +9,34 @@
 
 void print_number(int n)
 {
-	unsigned int k = n;
+	unsigned int yeni;
+	int a = 1;
 
 	if (n < 0)
 	{
-
+		yeni = n * -1;
 		_putchar('-');
-
-		k = -k;
+	}
+	else
+	{
+		yeni = n;
 	}
 
-	if ((k / 10) > 0)
-		print_number(k / 10);
-
-	_putchar((k % 10) + '0');
+	do {
+		if (yeni < 10)
+		{
+			_putchar(yeni + '0');
+			break;
+		}
+		a = a * 10 + yeni % 10;
+		yeni = yeni / 10;
+	} while (yeni != 0);
+	do {
+		if (a < 10)
+		{
+			break;
+		}
+		_putchar(a % 10 + '0');
+		a = a / 10;
+	} while (a != 0);
 }
