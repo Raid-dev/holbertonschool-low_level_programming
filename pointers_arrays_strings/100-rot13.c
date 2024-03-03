@@ -12,21 +12,21 @@ char *rot13(char *s)
 	int i = 0;
 	char c;
 
-	while (*(a + i) != '\0')
+	while (*(s + i) != '\0')
 	{
-		c = *(a + i);
+		c = *(s + i);
 		while ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		{
 			if (c >= 110 || (c >= 78 && c <= 90))
 			{
-				*(a + i) = *(a + i) - 13;
+				*(s + i) = *(s + i) - 13;
 				break;
 			}
-			*(a + i) = *(a + i) + 13;
+			*(s + i) = *(s + i) + 13;
 			break;
 		}
 		i++;
 	}
 
-	return (a);
+	return (s);
 }
