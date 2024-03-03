@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char *password[10];
+	char password[10];
 	int i;
 
 	srand(time(0));
@@ -18,7 +18,7 @@ int main(void)
 	for (i = 0; i < 10; i++)
 		password[i] = rand();
 
-	printf("%a\n", password);
+	printf("%s\n", password);
 
 	return (0);
 }
