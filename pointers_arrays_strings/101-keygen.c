@@ -10,17 +10,24 @@
 
 int main(void)
 {
-	char password[15];
-	int i;
+	int r = 0, c = 0;
+	time_t t;
 
-	srand(time(0));
+	srand((unsigned int) time(&t));
 
-	for (i = 0; i < 10; i++)
-		password[i] = rand();
+	while (c < 2772)
+	{
+		r = rand() % 128;
 
-	password = "Tada! Congrats";
+		if ((c + r) > 2772)
+			break;
 
-	printf("%s\n", password);
+		c = c + r;
+
+		printf("%c", r);
+	}
+
+	printf("%c\n", (2772 - c));
 
 	return (0);
 }
