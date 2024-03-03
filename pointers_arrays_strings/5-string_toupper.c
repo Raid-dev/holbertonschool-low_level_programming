@@ -9,7 +9,10 @@ char *string_toupper(char *s)
 		return NULL;
 
 	for (i = 0; s[i] != '\0'; i++)
-		s[i] = toupper((unsigned char) s[i]);
+	{
+		if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
+	}
 
 	return (s);
 }
