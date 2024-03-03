@@ -1,5 +1,13 @@
-#include <ctype.h>
-#include <stddef.h>
+#include "main.h"
+
+/**
+ * string_toupper - Entry point
+ *
+ * Description: Changes all lowercase letters of the string s to uppercase
+ * @s: The input string
+ *
+ * Return: String
+ */
 
 char *string_toupper(char *s)
 {
