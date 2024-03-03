@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * string_toupper - Entry point
+ * cap_string - Entry point
  *
- * Description: Changes all lowercase letters of the string s to uppercase
+ * Description: Capitalizes all words of the string s
  * @s: The input string
  *
  * Return: String
  */
 
-char *string_toupper(char *s)
+char *cap_string(char *s)
 {
 	int i;
 	int new_word = 1;
