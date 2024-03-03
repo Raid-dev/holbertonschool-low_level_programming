@@ -34,10 +34,10 @@ int _strcmp(char *s1, char *s2)
 	}
 	else if (i > j)
 	{
-		return (i + 4);
+		return (i + 3);
 	}
 	else
 	{
-		return (j + 4);
+		return (j + 3);
 	}
 }
