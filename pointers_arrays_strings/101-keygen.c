@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char *password;
+	char *password[10];
 	int i;
 
 	srand(time(0));
