@@ -1,4 +1,3 @@
-#include <string.h>
 #include "main.h"
 
 /**
@@ -12,10 +11,11 @@
 
 int _atoi(char *s)
 {
-	int b, i, minus = 0, size;
+	int b, i, minus = 0, size = 0;
 	unsigned int a = 0;
 
-	size = strlen(s);
+	while (s[size])
+		size++;
 
 	for (i = 0; i < size; i++)
 	{
