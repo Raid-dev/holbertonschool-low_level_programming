@@ -27,17 +27,17 @@ int _strcmp(char *s1, char *s2)
 		for (k = 0; k < i; k++)
 		{
 			if (s1[k] != s2[k])
-				return (15);
+				return (0);
 		}
 
 		return (0);
 	}
 	else if (i > j)
 	{
-		return (-15);
+		return (i + 4);
 	}
 	else
 	{
-		return (15);
+		return (j + 4);
 	}
 }
