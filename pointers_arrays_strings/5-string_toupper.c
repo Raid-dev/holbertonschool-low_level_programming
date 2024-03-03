@@ -6,7 +6,7 @@ char *string_toupper(char *s)
 	int i;
 
 	if (s == NULL)
-		return NULL;
+		return (NULL);
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
