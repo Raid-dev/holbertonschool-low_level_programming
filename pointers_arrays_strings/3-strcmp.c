@@ -34,7 +34,7 @@ int _strcmp(char *s1, char *s2)
 	}
 	else if (i > j)
 	{
-		return (i + 3);
+		return (-(i + 3));
 	}
 	else
 	{
