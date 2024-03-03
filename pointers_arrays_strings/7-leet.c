@@ -11,23 +11,19 @@
 
 char *leet(char *s)
 {
-	int i;
+	char a[] = { 'a', 'e', 'o', 't', 'l' };
+	char n[] = { 4, 3, 0, 7, 1 };
+	int i = 0;
 
-	if (s == NULL)
-		return NULL;
-
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s)
 	{
-		char c = s[i];
-
-		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		for (i = 0; i < 5; i++)
 		{
-			s[i] = c == 'a' || c == 'A' ? '4' :
-			c == 'e' || c == 'E' ? '3' :
-			c == 'o' || c == 'O' ? '0' :
-			c == 't' || c == 'T' ? '7' :
-			c == 'l' || c == 'L' ? '1' : c;
+			if (*s == a[i] || *s == a[i] - 32)
+				*s = n[i] + '0';
 		}
+
+		s++;
 	}
 
 	return (s);
