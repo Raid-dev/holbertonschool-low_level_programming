@@ -18,16 +18,16 @@ char *leet(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == 'a' || s[i] == 'A')
-			s[i] = '4';
-		else if (s[i] == 'e' || s[i] == 'E')
-			s[i] = '3';
-		else if (s[i] == 'o' || s[i] == 'O')
-			s[i] = '0';
-		else if (s[i] == 't' || s[i] == 'T')
-			s[i] = '7';
-		else if (s[i] == 'l' || s[i] == 'L')
-			s[i] = '1';
+		char c = s[i];
+
+		if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		{
+			s[i] = c == 'a' || c == 'A' ? '4' :
+			c == 'e' || c == 'E' ? '3' :
+			c == 'o' || c == 'O' ? '0' :
+			c == 't' || c == 'T' ? '7' :
+			c == 'l' || c == 'L' ? '1' : c;
+		}
 	}
 
 	return (s);
