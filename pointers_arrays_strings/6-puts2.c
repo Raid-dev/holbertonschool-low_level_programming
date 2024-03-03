@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts2 - Entry point
+ * puts2 - Entry point
  *
  * Description: Prints every other character of the pointer string str
  * @str: The input pointer
