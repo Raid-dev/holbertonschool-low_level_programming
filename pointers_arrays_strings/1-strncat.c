@@ -3,7 +3,7 @@
 /**
  * _strncat - Entry point
  *
- * Description: Concatenates two pointer strings dest and src but uses at most n bytes from src
+ * Description: Concatenates two strings dest and src but uses at most n bytes
  * @dest: The destination pointer
  * @src: The source pointer
  * @n: The input bytes
