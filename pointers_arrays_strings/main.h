@@ -40,6 +40,14 @@
  * cap_string - Capitalizes all words of a string
  *
  * leet - Encodes a string into 1337
+ *
+ * rot13 - Encodes a string using rot13
+ *
+ * print_number - Prints an integer
+ *
+ * infinite_add - Adds two numbers
+ *
+ * print_buffer - Prints buffer
  */
 
 int _putchar(char c);
@@ -81,3 +89,11 @@ char *string_toupper(char *);
 char *cap_string(char *);
 
 char *leet(char *);
+
+char *rot13(char *s);
+
+void print_number(int n);
+
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+void print_buffer(char *b, int size);
