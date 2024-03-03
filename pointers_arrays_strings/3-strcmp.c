@@ -26,7 +26,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		for (k = 0; k < i; k++)
 		{
-			if (dest[k] != src[k])
+			if (s1[k] != s2[k])
 				return (15);
 		}
 
