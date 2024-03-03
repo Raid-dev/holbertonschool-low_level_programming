@@ -27,7 +27,7 @@ char *leet(char *s)
 		s++;
 	}
 
-	printf("%s\n", s);
-	
+	puts(s);
+
 	return (s);
 }
