@@ -5,6 +5,8 @@
  *
  * Description: Encodes the string s using rot13
  * @s: The input string
+ *
+ * Return: String
  */
 
 char *rot13(char *s)
