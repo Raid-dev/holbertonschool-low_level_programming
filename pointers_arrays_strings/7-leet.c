@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * leet - Entry point
@@ -26,5 +27,7 @@ char *leet(char *s)
 		s++;
 	}
 
+	printf("%s\n", s);
+	
 	return (s);
 }
