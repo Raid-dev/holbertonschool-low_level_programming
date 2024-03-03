@@ -5,7 +5,7 @@
  *
  * Description: Converts the pointer string s to integer
  * @s: The input pointer
- * 
+ *
  * Return: Integer
  */
 
