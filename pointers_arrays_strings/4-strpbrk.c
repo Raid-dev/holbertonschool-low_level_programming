@@ -14,8 +14,6 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int bytes = 0;
-
 	while (*s != '\0')
 	{
 		char *a = accept;
