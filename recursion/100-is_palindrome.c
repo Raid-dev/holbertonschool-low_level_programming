@@ -36,7 +36,7 @@ int is_palindrome(char *s)
 	int length = 0;
 
 	while (s[length] != '\0')
-		lenght++;
+		length++;
 
 	if (length == 0)
 		return (1);
