@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * palindrome_checker - Checks the palindrome using recursion
@@ -34,10 +33,13 @@ int palindrome_checker(char *s, int i, int n)
 
 int is_palindrome(char *s)
 {
-	int size = strlen(s);
+	int length = 0;
 
-	if (size == 0)
+	while (s[length] != '\0')
+		lenght++;
+
+	if (length == 0)
 		return (1);
 
-	return (palindrome_checker(s, 0, size - 1));
+	return (palindrome_checker(s, 0, length - 1));
 }
