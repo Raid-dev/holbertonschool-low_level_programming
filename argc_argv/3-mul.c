@@ -1,27 +1,26 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
  *
- * Description: Prints program's name
+ * Description: Multiplies two numbers
  * @argc: The count
  * @argv: The vector
  *
- * Return: Always 0 (Success)
+ * Return: 1 in error case, 0 otherwise.
  */
 
 int main(int argc, char **argv)
 {
-	int i = 0, n = 1;
-
-	while (i < argc)
+	if (argc > 2)
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]);
+	else
 	{
-		n *= argv[i];
+		printf("Error\n");
 
-		i++;
+		return (1);
 	}
-
-	printf("%d\n", n);
 
 	return (0);
 }
