@@ -11,15 +11,13 @@
 
 void print_chessboard(char (*a)[8])
 {
-	unsigned int i = 0;
+	unsigned int i = 0, j = 0;
 
 	for (i = 0; i < 8; i++)
 	{
-		while ((*a)[i] != '\0')
-		{
-			_putchar((*a)[i]);
+		for (j = 0; j < 8; j++)
+			printf("%c", (*a)[i][j]);
 
-			(*a)[i]++;
-		}
+		_puthcar('\n');
 	}
 }
