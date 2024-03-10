@@ -39,5 +39,5 @@ int is_palindrome(char *s)
 	if (size == 0)
 		return (1);
 
-	return (polyndrome_checker(s, 0, size - 1));
+	return (palindrome_checker(s, 0, size - 1));
 }
