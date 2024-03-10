@@ -3,6 +3,27 @@
 #include <stdlib.h>
 
 /**
+ * is_number - Checks if input n is number
+ * @n: The input
+ *
+ * Return: 1 if is number, 0 otherwise.
+ */
+
+int is_number(char *n)
+{
+	int i = 0;
+
+	while (*(n + i) != '\0')
+	{
+		if (!isdigit(*(n + i)))
+			return (0);
+		i++;
+	}
+
+	return (1);
+}
+
+/**
  * main - Entry point
  *
  * Description: Adds positive numbers
@@ -14,21 +35,22 @@
 
 int main(int argc, char **argv)
 {
-	int i, sum = 0;
+	int i, sum = 0, c = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!isdigit(atoi(argv[i])))
-		{
-			printf("Error\n");
+		if (!is_natural(argv[i]))
+			break;
 
-			return (1);
-		}
-		else
-			sum += atoi(argv[i]);
+		c++;
+
+		sum += atoi(argv[i]);
 	}
 
-	printf("%d\n", sum);
+	if (c == argc - 1)
+		printf("%d\n", sum);
+	else
+		printf("Error\n");
 
 	return (0);
 }
