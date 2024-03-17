@@ -27,8 +27,8 @@ int main(int ac, char *av[])
 
 	s1 = av[1], s2 = av[2];
 
-	len1 = _strlen(s1);
-	len2 = _strlen(s2);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
 	len = len1 + len2 + 1;
 
 	result = malloc(sizeof(int) * len);
@@ -44,7 +44,7 @@ int main(int ac, char *av[])
 		digit1 = s1[len1] - '0';
 		carry = 0;
 
-		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
+		for (len2 = strlen(s2) - 1; len2 >= 0; len2--)
 		{
 			digit2 = s2[len2] - '0';
 			carry += result[len1 + len2 + 1] + (digit1 * digit2);
@@ -61,13 +61,13 @@ int main(int ac, char *av[])
 		if (result[i])
 			a = 1;
 		if (a)
-			_putchar(result[i] + '0');
+			putchar(result[i] + '0');
 	}
 
 	if (!a)
-		_putchar('0');
+		putchar('0');
 
-	_putchar('\n');
+	putchar('\n');
 
 	free(result);
 
