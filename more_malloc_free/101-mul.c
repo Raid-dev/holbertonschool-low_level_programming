@@ -16,6 +16,7 @@
 int main(int argc, char *argv[])
 {
 	long int num1, num2;
+	unsigned int i, j;
 
 	if (argc != 3)
 	{
@@ -23,9 +24,9 @@ int main(int argc, char *argv[])
 		exit (98);
 	}
 
-	for (int i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-		for (int j = 0; argv[i][j] != '\0'; j++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
