@@ -4,6 +4,43 @@
 #include <string.h>
 
 /**
+ * multiply - Multiplies two numbers
+ */
+
+void multiply(char* num1, char* num2)
+{
+	int len1 = strlen(num1);
+	int len2 = strlen(num2);
+
+	int* result = (int*)calloc(len1 + len2, sizeof(int));
+
+	for (int i = len1 - 1; i >= 0; i--)
+	{
+		for (int j = len2 - 1; j >= 0; j--)
+		{
+			result[i + j + 1] += (num1[i] - '0') * (num2[j] - '0');
+			result[i + j] += result[i + j + 1] / 10;
+			result[i + j + 1] %= 10;
+		}
+	}
+
+	int i = 0;
+
+	while (i < len1 + len2 && result[i] == 0)
+		i++;
+
+	while (i < len1 + len2)
+	{
+		printf("%d", result[i]);
+		i++;
+	}
+
+	printf("\n");
+
+	free(result);
+}
+
+/**
  * main - Multiplies two positive numbers
  *
  * Description: Multiplies two arguments of the program
@@ -15,31 +52,25 @@
 
 int main(int argc, char *argv[])
 {
-	long int num1, num2;
-	int i, j;
-
 	if (argc != 3)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 
-	for (i = 1; i < argc; i++)
+	for (int i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		for (int j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
 				printf("Error\n");
-				exit (98);
+				exit(98);
 			}
 		}
 	}
 
-	num1 = atol(argv[1]);
-	num2 = atol(argv[2]);
-
-	printf("%ld\n", num1 * num2);
+	multiply(argv[1], argv[2]);
 
 	return (0);
 }
