@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac + 1; i++)
+	for (i = 0; i < ac + 1; i++)
 	{
 		if ((int *)av[i] != NULL)
 		{
@@ -34,7 +34,7 @@ char *argstostr(int ac, char **av)
 	if (str == NULL)
 		return (NULL);
 
-	for (i = 1; i < ac + 1; i++)
+	for (i = 0; i < ac + 1; i++)
 	{
 		if ((int *)av[i] != NULL)
 		{
