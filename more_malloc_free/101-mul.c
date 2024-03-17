@@ -47,7 +47,6 @@ void multiply(char *num1, char *num2)
 		}
 
 		printf("\n");
-		free(result);
 	}
 
 	free(result);
