@@ -31,13 +31,13 @@ void multiply(char *num1, char *num2)
 	i = 0;
 	while (i < len1 + len2 && result[i] == 0)
 		i++;
-	while (i < len1 + len2)
+	while (i < len1 + len2 - 1)
 	{
 		printf("%d", result[i]);
 		i++;
 	}
 	if (i == len1 + len2)
-		printf("0");
+		printf("0\n");
 	else
 	{
 		while (i < len1 + len2)
