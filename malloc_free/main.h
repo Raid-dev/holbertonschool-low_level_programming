@@ -12,6 +12,10 @@
  * alloc_grid - Returns a pointer to a 2 dimensional array of integers
  *
  * free_grid - Frees a 2 dimensional grid previously created by your alloc_grid function
+ *
+ * argstostr - Concatenates all the arguments of your program
+ *
+ * strtow - Splits a string into words
  */
 
 int _putchar(char c);
@@ -25,3 +29,7 @@ char *str_concat(char *s1, char *s2);
 int **alloc_grid(int width, int height);
 
 void free_grid(int **grid, int height);
+
+char *argstostr(int ac, char **av);
+
+char **strtow(char *str);
