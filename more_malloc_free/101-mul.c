@@ -9,14 +9,16 @@
 
 void multiply(char* num1, char* num2)
 {
+	int i, j;
+
 	int len1 = strlen(num1);
 	int len2 = strlen(num2);
 
 	int* result = (int*)calloc(len1 + len2, sizeof(int));
 
-	for (int i = len1 - 1; i >= 0; i--)
+	for (i = len1 - 1; i >= 0; i--)
 	{
-		for (int j = len2 - 1; j >= 0; j--)
+		for (j = len2 - 1; j >= 0; j--)
 		{
 			result[i + j + 1] += (num1[i] - '0') * (num2[j] - '0');
 			result[i + j] += result[i + j + 1] / 10;
@@ -24,7 +26,7 @@ void multiply(char* num1, char* num2)
 		}
 	}
 
-	int i = 0;
+	i = 0;
 
 	while (i < len1 + len2 && result[i] == 0)
 		i++;
