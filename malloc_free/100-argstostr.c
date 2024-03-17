@@ -22,30 +22,30 @@ char *argstostr(int ac, char **av)
 
 	for (i = 1; i < ac + 1; i++)
 	{
-		if (av[i] != NULL)
+		if (*av[i] != NULL)
 		{
-			while (av[i] != '\0')
+			while (*av[i] != '\0')
 				arg_len++;
 		}
 	}
 	str = malloc(arg_len + ac * 2);
 	if (str == NULL)
 		return (NULL);
-	len = 0;
+	arg_len = 0;
 
 	for (i = 1; i < ac + 1; i++)
 	{
 		while (str[str_len] != '\0')
 			str_len++;
 
-		if (av[i] != NULL)
+		if (*av[i] != NULL)
 		{
-			while (av[i] != '\0')
+			while (*av[i] != '\0')
 				arg_len++;
 		}
 
 		for (j = str_len; j < str_len + arg_len; j++)
-			str[j] = arg[j - str_len];
+			str[j] = av[j - str_len];
 
 		str[str_len + arg_len] = '\0';
 		str[str_len + arg_len + 1] = '\n';
