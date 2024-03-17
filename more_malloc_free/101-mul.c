@@ -25,7 +25,7 @@ int main(int ac, char *av[])
 		exit(98);
 	}
 
-	s1 = argv[1], s2 = argv[2];
+	s1 = av[1], s2 = av[2];
 
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
