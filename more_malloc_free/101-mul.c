@@ -14,12 +14,12 @@
 
 int main(int ac, char **av)
 {
-	if (ac != 3 || !isdigt(av[1]) || !isdigit(av[2]))
+	if (ac != 3 || !isdigit(av[1]) || !isdigit(av[2]))
 	{
 		printf("Error\n");
 
 		exit(98);
 	}
 
-	return (av[1] * av[2]);
+	return (((int *)av)[1] * ((int *)av)[2]);
 }
