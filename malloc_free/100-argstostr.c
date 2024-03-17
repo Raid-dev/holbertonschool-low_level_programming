@@ -22,11 +22,8 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		if ((int *)av[i] != NULL)
-		{
-			while (av[i][arg_len] != '\0')
+		while (av[i][arg_len] != '\0')
 				arg_len++;
-		}
 		size += arg_len;
 		arg_len = 0;
 	}
