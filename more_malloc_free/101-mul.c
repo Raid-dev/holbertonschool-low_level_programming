@@ -1,10 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 #include <string.h>
 
 /**
  * multiply - Multiplies two numbers
+ *
+ * Description: Handles cases for very big numbers
+ * @num1: The first number
+ * @num2: The second number
+ *
+ * Return: Nothing.
  */
 
 void multiply(char* num1, char* num2)
@@ -37,7 +42,18 @@ void multiply(char* num1, char* num2)
 		i++;
 	}
 
-	printf("\n");
+	if (i == len1 + len2)
+		printf("0\n");
+	else
+	{
+		while (i < len1 + len2)
+		{
+			printf("%d", result[i]);
+			i++;
+		}
+
+		printf("\n");
+	}
 
 	free(result);
 }
