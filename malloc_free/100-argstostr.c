@@ -15,7 +15,7 @@
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i, j, arg_len = 0, str_len = 0;
+	int i, j, size = 0, arg_len = 0, str_len = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -27,9 +27,11 @@ char *argstostr(int ac, char **av)
 			while (av[i][arg_len] != '\0')
 				arg_len++;
 		}
+		size += arg_len;
+		arg_len = 0;
 	}
 
-	str = malloc(arg_len + ac + 1);
+	str = malloc(size + ac + 1);
 
 	if (str == NULL)
 		return (NULL);
