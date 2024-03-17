@@ -15,7 +15,8 @@
 
 int main(int argc, char *argv[])
 {
-	long long int num1, num2;
+	long int num1, num2;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -41,4 +42,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-
