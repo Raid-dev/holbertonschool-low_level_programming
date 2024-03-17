@@ -34,7 +34,7 @@ int main(int ac, char *av[])
 	result = malloc(sizeof(int) * len);
 
 	if (!result)
-		return (NULL);
+		return (1);
 
 	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
