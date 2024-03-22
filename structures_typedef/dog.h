@@ -1,6 +1,15 @@
 #ifndef DOG_H
 #define DOG_H
 
+/**
+ * dog - Type structure
+ *
+ * Description: Dog type structure
+ * @name: The name of dogs
+ * @age: The age of dogs
+ * @owner: The owner of dogs
+ */
+
 struct dog
 {
 	char *name;
