@@ -2,7 +2,7 @@
 #define DOG_H
 
 /**
- * dog - Type structure
+ * struct dog - Type structure
  *
  * Description: Dog type structure
  * @name: The name of dogs
