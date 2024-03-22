@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * copy_str - Copies a string
+ * str_cpy - Copies a string
  *
  * Description: Copies the string str
  * @str: The string to copy
@@ -11,14 +11,15 @@
  * Return: NULL on failure, a copy of a string otherwise.
  */
 
-char *copy_str(char *str)
+char *str_cpy(char *str)
 {
 	unsigned int i = 0, j = 0;
+	char *copy;
 
 	while (str[i] != '\0')
 		i++;
 
-	char *copy = malloc((i + 1) * sizeof(char));
+	copy = malloc((i + 1) * sizeof(char));
 
 	if (copy == NULL)
 		return (NULL);
