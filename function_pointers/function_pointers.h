@@ -5,6 +5,9 @@
 
 /**
  * _putchar - Writes the character c
+ * @c: The character to write
+ *
+ * Return: A character.
  *
  * print_name - Prints a name
  *
