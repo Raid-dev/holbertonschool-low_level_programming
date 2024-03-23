@@ -8,7 +8,8 @@
  *
  * print_name - Prints a name
  *
- * array_iterator - Executes a function given as a parameter on each element of an array
+ * array_iterator - Executes a function given as a parameter on each element of
+ * an array
  *
  * int_index - Searches for an integer
  *
