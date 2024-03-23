@@ -14,6 +14,8 @@
 
 int main(int argc, char **argv)
 {
+	int (*fun)(int, int);
+
 	if (argc > 4 || *argv[2] != '+' || *argv[2] != '-' || *argv[2] != '*'
 			|| *argv[2] != '/' || *argv[2] != '%'
 			|| ((*argv[2] == '/' || *argv[2] == '%') &&
@@ -32,7 +34,7 @@ int main(int argc, char **argv)
 			exit(100);
 	}
 
-	int (*fun)(int, int) = get_op_func(argv[2]);
+	fun = get_op_func(argv[2]);
 
 	fun(atoi(argv[1]), atoi(argv[3]));
 
