@@ -14,20 +14,21 @@
 
 int main(int argc, char **argv)
 {
-	if (argc > 4 || argv[2] != '+' || argv[2] != '-' || argv[2] != '*' ||
-			argv[2] != '/' || argv[2] != '%' || ((argv[2] == '/'
-					|| argv[2] == '%') && argv[3] == 0))
+	if (argc > 4 || *argv[2] != '+' || *argv[2] != '-' || *argv[2] != '*'
+			|| *argv[2] != '/' || *argv[2] != '%'
+			|| ((*argv[2] == '/' || *argv[2] == '%') &&
+				*argv[3] == 0))
 	{
 		printf("Error\n");
 
 		if (argc > 4)
 			exit(98);
 
-		if (argv[2] != '+' || argv[2] != '-' || argv[2] != '*' ||
-				argv[2] != '/' || argv[2] != '%')
+		if (*argv[2] != '+' || *argv[2] != '-' || *argv[2] != '*' ||
+				*argv[2] != '/' || *argv[2] != '%')
 			exit(99);
 
-		if ((argv[2] == '/' || argv[2] == '%') && argv[3] == 0)
+		if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == 0)
 			exit(100);
 	}
 
