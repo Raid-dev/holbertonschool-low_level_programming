@@ -15,7 +15,6 @@
 int main(int argc, char **argv)
 {
 	int (*fun)(int, int);
-	char *result;
 
 	if (argc > 4)
 	{
@@ -38,12 +37,10 @@ int main(int argc, char **argv)
 
 	fun = get_op_func(argv[2]);
 
-	result = malloc(op_t);
+	if (fun == NULL)
+		return (-1);
 
-	if (result == NULL)
-		return (NULL);
-
-	fun(atoi(argv[1]), atoi(argv[3]));
+	printf("%d\n", fun(atoi(argv[1]), atoi(argv[3])));
 
 	return (0);
 }
