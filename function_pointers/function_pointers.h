@@ -1,6 +1,8 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
 
+#include <unistd.h>
+
 /**
  * _putchar - Writes the character c
  *
