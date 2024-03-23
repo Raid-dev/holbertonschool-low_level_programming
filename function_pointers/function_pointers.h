@@ -1,4 +1,5 @@
-#include <unistd.h>
+#ifndef FUNCTION_POINTERS_H
+#define FUNCTION_POINTERS_H
 
 /**
  * _putchar - Writes the character c
@@ -39,3 +40,5 @@ int op_div(int a, int b);
 int op_mod(int a, int b);
 
 int (*get_op_func(char *s))(int, int);
+
+#endif
