@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 			exit(100);
 	}
 
-	int *fun = get_op_func(argv[2]);
+	int (*fun)(int, int) = get_op_func(argv[2]);
 
 	fun(atoi(argv[1]), atoi(argv[3]));
 
