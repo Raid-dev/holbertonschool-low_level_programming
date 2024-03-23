@@ -12,7 +12,7 @@
  * Return: Always 0 (Success).
  */
 
-int main(int argc, int **argv)
+int main(int argc, char **argv)
 {
 	if (argc > 4 || argv[2] != '+' || argv[2] != '-' || argv[2] != '*' ||
 			argv[2] != '/' || argv[2] != '%' || ((argv[2] == '/'
