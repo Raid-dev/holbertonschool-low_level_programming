@@ -24,8 +24,6 @@ int main(int argc, char **argv)
 
 	num_bytes = atoi(argv[1]);
 
-	printf("%d\n", num_bytes);
-
 	if (num_bytes < 0)
 	{
 		printf("Error\n");
