@@ -1,19 +1,13 @@
 section .data
-    hello db 'Hello, World', 0Ah    ; The string to print, 0Ah is the newline character
+	txt db "Hello, World", 0xA
+global main
+main:
+	MOV rax, 0x1
+	MOV rdi, 0x1
+	MOV rsi, txt
+	MOV rdx, 13
+	SYSCALL
 
-section .text
-    global _start
-
-_start:
-    ; write syscall
-    mov eax, 4                      ; The syscall number for sys_write
-    mov ebx, 1                      ; File descriptor 1 is stdout
-    mov ecx, hello                  ; Pointer to the message
-    mov edx, 13                     ; Length of the message string
-    int 0x80                        ; Call the kernel
-
-    ; exit syscall
-    mov eax, 1                      ; The syscall number for sys_exit
-    xor ebx, ebx                    ; Exit code 0
-    int 0x80                        ; Call the kernel
-
+	MOV rax, 0x3C
+	MOV rdi, 0x0
+	SYSCALL
