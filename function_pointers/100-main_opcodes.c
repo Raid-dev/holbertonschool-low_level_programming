@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 	{
 		opcode = *(char *)memory_checker;
 
-		if (i == num - 1)
+		if (i == num_bytes - 1)
 			printf("%.2x", (opcode & mask));
 		else
 			printf("%.2x ", (opcode & mask)), memory_checker++;
