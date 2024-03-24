@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	unsigned char *func_ptr = (unsigned char *)main;
 	int i, num_bytes;
 
-	if (argc != 2)
+	if (argc == 2)
 	{
 		printf("Error\n");
 		exit(1);
