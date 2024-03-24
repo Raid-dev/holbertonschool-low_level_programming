@@ -1,13 +1,9 @@
-section .data
-	txt db "Hello, World", 0xA
-global main
+global	main
+	extern	printf
 main:
-	MOV rax, 0x1
-	MOV rdi, 0x1
-	MOV rsi, txt
-	MOV rdx, 13
-	SYSCALL
-
-	MOV rax, 0x3C
-	MOV rdi, 0x0
-	SYSCALL
+	mov edi, format
+	xor eax, eax
+	call printf
+	mov eax, 0
+	ret
+format: db `Hello, World\n`, 0
