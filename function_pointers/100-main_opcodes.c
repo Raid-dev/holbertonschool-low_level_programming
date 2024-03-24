@@ -13,10 +13,11 @@
 
 int main(int argc, char **argv)
 {
-	unsigned char *func_ptr = (unsigned char *)main;
-	int i, num_bytes;
+	int i, num_bytes, mask = 0x000000ff;
+	int (*memory_checker)(int, char **) = main;
+	char opcode;
 
-	if (argc == 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
@@ -32,7 +33,12 @@ int main(int argc, char **argv)
 
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x ", func_ptr[i]);
+		opcode = *(char *)memory_checker;
+
+		if (i == num - 1)
+			printf("%.2x", (opcode & mask));
+		else
+			printf("%.2x ", (opcode & mask)), memory_checker++;
 	}
 
 	printf("\n");
