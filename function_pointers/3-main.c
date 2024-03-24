@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - Entry point
@@ -15,21 +16,22 @@
 int main(int argc, char **argv)
 {
 	int (*fun)(int, int);
-	
+
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	if (*argv[2] != '+' && *argv[2] != '-' && *argv[2] != '*' &&
-			*argv[2] != '/' && *argv[2] != '%')
+	if (strcmp(argv[2], "+") != 0 && strcmp(argv[2], "-") != 0 &&
+			strcmp(argv[2], "*") != 0 &&
+			strcmp(argv[2], "/") != 0 && strcmp(argv[2], "%") != 0)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	if ((*argv[2] == '/' || *argv[2] == '%') && *argv[3] == 0)
+	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) && argv[3] == 0)
 	{
 		printf("Error\n");
 		exit(100);
