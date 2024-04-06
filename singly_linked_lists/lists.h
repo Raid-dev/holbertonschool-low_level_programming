@@ -11,11 +11,11 @@
  * @next: The pointer to the next list
  */
 
-struct list
+typedef struct list
 {
 	char *str;
 	int len;
-	list *next;
+	struct list *next;
 } list_t;
 
 /**
