@@ -23,6 +23,8 @@ typedef struct list
  * @c: The character to write
  * Return: The character.
  *
+ * _strlen - Returns the length of string
+ *
  * print_list - Prints the list_t list h and returns the number of elements
  *
  * list_len - Returns the number of elements in the linked list_t list h
@@ -35,6 +37,8 @@ typedef struct list
  */
 
 int _putchar(char c);
+
+int _strlen(char *str);
 
 size_t print_list(const list_t *h);
 
