@@ -3,6 +3,26 @@
 #include <stdlib.h>
 
 /**
+ * dlistint_len - Returns the number of elements in a linked dlistint_t list h
+ * @h: The dlistint_t list to return its length
+ *
+ * Return: The number of elements.
+ */
+
+size_t dlistint_len(const dlistint_t *h)
+{
+	int i = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
+
+	return (i);
+}
+
+/**
  * insert_dnodeint_at_index - Inserts a new node to the dlistint_t list h
  * at the given position idx
  * @h: The dlistint_t list
