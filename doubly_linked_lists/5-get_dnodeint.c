@@ -2,6 +2,26 @@
 #include <stdio.h>
 
 /**
+ * dlistint_len - Returns the number of elements in a linked dlistint_t list h
+ * @h: The dlistint_t list to return its length
+ *
+ * Return: The number of elements.
+ */
+
+size_t dlistint_len(const dlistint_t *h)
+{
+	int i = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
+
+	return (i);
+}
+
+/**
  * get_dnodeint_at_index - Returns the nth node of a dlistint_t linked list
  * @head: The dlistint_t list to search in
  * @index: The index of node
